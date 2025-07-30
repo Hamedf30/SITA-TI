@@ -6,7 +6,7 @@
       <div class="card-header text-center bg-gradient-gray text-white">
         <a href="" class="h1 font-weight-bold d-flex align-items-center justify-content-center">
             <img src="{{ asset('assets/dist/img/pnp.png') }}" alt="Logo" style="height: 60px; margin-right: 10px;">
-            <b>SITA</b>PNP
+            <b>SITA</b>TI
         </a>
     </div>
         <div class="card-body">
