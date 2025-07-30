@@ -1,1 +1,1 @@
-Project Kel 1
+Proyek Web Sistem Informasi Tugas Akhir Jurusan Teknologi Informasi
