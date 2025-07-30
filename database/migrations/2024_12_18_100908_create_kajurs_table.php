@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('kajurs', function (Blueprint $table) {
+            $table->id();
+            $table->biginteger('user_id')->unsigned()->nullable();
+            $table->foreignId('jurusan_id');
+            $table->enum('jekel', ['pria','wanita'])->nullable();
+            $table->string('nama');
+            $table->string('email')->unique();
+            $table->string('nidn',15)->unique();
+            $table->string('no_telp');
+            $table->string('alamat');
+            $table->string('gambar')->nullable();
+            $table->timestamps();
+
+            // Relation Tables
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('kajurs');
+    }
+};
